@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index')->name('home');
+
+Route::post('/login','UsersController@login');
+Route::get('/{usuario}','UsersController@index')->name('userHome');
+/*Route::get('/home','EmpleadosController@index')->name('home');
+Route::get('/export','EmpleadosController@export')->name('export');
+Route::post('/cargarEmpleados','EmpleadosController@import')->name('cargarEmpleados');
+*/
